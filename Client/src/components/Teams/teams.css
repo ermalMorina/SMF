@@ -1,0 +1,30 @@
+.teams__header {
+    background-image: url('../../images/bg.jpg');
+    height: 40vh;
+    object-fit: cover;
+}
+
+.teams__header__container {
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.team__footer {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team__card {
+    margin: 50px;
+}
+
+
+.team__card:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}

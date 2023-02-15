@@ -1,0 +1,30 @@
+@startuml
+
+title "SPARTan ManageFootball - TeamAdmin Sequence Diagram"
+
+actor User
+User -> LogIn: Insert LogIn Details
+
+database Database
+LogIn -> Database: Authenticate user
+
+alt successful
+
+  Database --> LogIn: User Authenticated
+  
+else failure
+  Database --> LogIn: Authentication Failed
+  
+end
+
+entity Dashboard
+
+LogIn -> Dashboard: Redirected to admin team page
+LogIn --> User: Invalid LogIn Details!
+
+Database --> LogIn: User does not exist
+LogIn --> User: Would you like to register?
+
+User -> Register: Redirect to registration
+
+@enduml

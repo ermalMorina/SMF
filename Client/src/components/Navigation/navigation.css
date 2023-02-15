@@ -1,0 +1,8 @@
+.nav__container {
+    background-color: #2C2D31;
+    font-size: 18px;
+}
+
+.nav__link:hover {
+    color: #35AD79;
+}

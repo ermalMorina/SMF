@@ -1,0 +1,19 @@
+.confirm__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.confirm__container {
+    color: #35AD79;
+}
+
+.redirect {
+    background-color: #35AD79;
+}
+
+.redirect:hover {
+    background-color: #1acd7f;
+}

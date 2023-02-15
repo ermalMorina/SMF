@@ -1,0 +1,29 @@
+.login__container {
+    margin-top: 9rem;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.login__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login__form {
+    width: 500px;
+    padding: 50px;
+    background-color: #fff;
+    margin-top: 3rem;
+}
+
+
+.login__form button {
+    width: 100%;
+    background-color: #35AD79;
+}
+
+.login__form button:hover {
+    background-color: #20cb81;
+}

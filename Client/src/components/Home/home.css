@@ -1,0 +1,13 @@
+.home__container {
+    background-image: url(../../images/img1.jpg);
+    height: 70vh;
+    object-fit: cover;
+}
+
+.home__header {
+    position: absolute;
+    top: 40%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    color: white;
+}

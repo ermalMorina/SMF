@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "react-medium-image-zoom": "^4.4.3",
+    "react-scripts": "^5.0.1"
+  }
+}

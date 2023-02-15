@@ -1,0 +1,33 @@
+body {
+    background-color: #fff !important;
+}
+
+.notfound {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 15rem; */
+    max-width:900px;
+    margin: 20rem auto;
+}
+
+.paragraph {
+    margin: 1rem 0 4rem 0;
+}
+
+.button {
+    color: white;
+    background-color: #35AD79;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.button:hover {
+    color: white;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: .7s;
+}

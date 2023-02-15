@@ -1,0 +1,14 @@
+@startuml
+
+title "SPARTan ManageFootball - TeamAdmin Sequence Diagram"
+
+actor FanView
+
+FanView -> ControlFixture: Show Matches
+Activate FanView
+ControlFixture -> FixtureAPI: Request the list of matches and dates (HttpGet)
+FixtureAPI --> FanView: Display list of matches
+Deactivate FanView
+
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+
+title "SPARTan ManageFootball - Register Sequence Diagram"
+
+actor User
+Register -> User: Request registration details
+User --> Register: Insert Register Details
+
+database Database
+Register -> Database: Register user
+
+alt success
+
+  Database --> Register: Registration success
+  Register --> User: You have been register
+  
+else failure
+
+  Database --> Register: Registration failed
+  Register --> User: Failed Registration
+  
+end
+
+entity AdminPage
+User -> AdminPage: Redirect to admin page after registration
+
+
+@enduml

@@ -1,0 +1,121 @@
+@startuml
+
+title "SPARTan ManageFootball - SpartanAgent Sequence Diagram"
+
+entity SpartanAgent
+
+
+SpartanAgent -> AddLeague: Add a League
+Activate AddLeague
+AddLeague -> ControlLeagues: Request to add a league
+ControlLeagues -> LeagueAPI: Request to add a league (HttpPost)
+
+ControlLeagues --> AddLeague: Display the league
+Deactivate AddLeague
+
+SpartanAgent -> AddLeague: Edit League
+Activate AddLeague
+AddLeague -> ControlLeagues: Request to edit league
+ControlLeagues -> LeagueAPI: Request to edit league (HttpPut)
+
+ControlLeagues --> AddLeague: Display the league
+Deactivate AddLeague
+
+SpartanAgent -> AddLeague: Remove a League
+Activate AddLeague
+AddLeague -> ControlLeagues: Request to remove league
+ControlLeagues -> LeagueAPI: Request to remove (HttpDelete)
+
+ControlLeagues --> AddLeague: Display the league
+Deactivate AddLeague
+
+SpartanAgent -> ManageLeague: Show Squads
+Activate ManageLeague
+ManageLeague -> ControlLeague: Request list of Squads
+ControlLeague -> ManageLeagueAPI: Retrive List of Squads (HttpGet)
+
+ControlLeague --> ManageLeague: Display Squads
+Deactivate ManageLeague
+
+SpartanAgent -> ManageLeague: Add Squad
+Activate ManageLeague
+ManageLeague -> ControlLeague: Request new squad
+ControlLeague -> ManageLeagueAPI: Request new squad (HttpPost)
+
+ControlLeague --> ManageLeague: Display new squad
+Deactivate ManageLeague
+
+SpartanAgent -> ManageLeague: Update Squad
+Activate ManageLeague
+ManageLeague -> ControlLeague: Request to update a squad
+ControlLeague -> ManageLeagueAPI: Request update method (HttpPut)
+
+ControlLeague --> ManageLeague: Display the updated squad
+Deactivate ManageLeague
+
+SpartanAgent -> ManageLeague: Remove Squad
+Activate ManageLeague
+ManageLeague -> ControlLeague: Request to remove a squad
+ControlLeague -> ManageLeagueAPI: Request delete method (HttpDelete)
+
+ControlLeague --> ManageLeague: Display list of squad
+Deactivate ManageLeague
+
+
+SpartanAgent -> ManageLeague: Generate all games
+Activate ManageLeague
+ManageLeague -> ControlLeague: Request new games
+ControlLeague -> ManageLeagueAPI: Request new games the games (HttpGet)
+
+ControlLeague --> ManageLeague: Display list of games
+Deactivate ManageLeague
+
+
+SpartanAgent -> ManageLeague: Generate delegation of referees to the games
+Activate ManageLeague
+ManageLeague -> ControlLeague: Request delegation of referees
+ControlLeague -> ManageLeagueAPI: Reuqest the delegation of referees (HttpGet)
+
+ControlLeague --> ManageLeague: Display the delegations of referees
+Deactivate ManageLeague
+
+SpartanAgent -> ManageLeague: CheckIfSquadIsVerified
+Activate ManageLeague
+ManageLeague -> ControlLeague: Requests the list of verified squads 
+ControlLeague -> Database: Retrieves the data (HttpPut)
+
+ControlLeague --> ManageLeague: sends back the response
+Deactivate ManageLeague
+
+SpartanAgent -> ControlFixture: Show Matches
+
+Activate SpartanAgent
+ControlFixture -> FixtureAPI: Request the list of matches and dates (HttpGet)
+FixtureAPI --> SpartanAgent: Display list of matches
+Deactivate SpartanAgent
+database Database
+SpartanAgent -> EditReferee: Show Referees
+Activate EditReferee
+EditReferee -> ControlReferees: Request list of Referees
+ControlReferees -> RefereeAPI: Retrive List of Referees (HttpGet)
+
+ControlReferees --> EditReferee: Display Referees
+Deactivate EditReferee
+
+SpartanAgent -> EditReferee: Add Referee
+Activate EditReferee
+EditReferee -> ControlReferees: Request new Referee
+ControlReferees -> RefereeAPI: Request new Referee (HttpPost)
+
+ControlReferees --> EditReferee: Display new Referee
+Deactivate EditReferee
+
+SpartanAgent -> EditReferee: Remove Referee
+Activate EditReferee
+EditReferee -> ControlReferees: Request to remove a Referee
+ControlReferees -> RefereeAPI: Request delete method (HttpDelete)
+
+ControlReferees --> EditReferee: Display list of Referees
+Deactivate EditReferee
+
+@enduml

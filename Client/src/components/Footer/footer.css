@@ -1,0 +1,15 @@
+.footer__container {
+    margin-top: 10rem;
+    background-color: #2C2D31;
+    padding: 7rem 5rem;
+    color: grey;
+}
+
+.footer__container a {
+    text-decoration: none;
+    color: #35AD79;
+}
+
+.footer__container a:hover {
+    color: #23c981;
+}

@@ -1,0 +1,47 @@
+.form__container {
+    position: absolute;
+    top: 10%;
+    left: 33%;
+    width: 700px;
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    background-color: #fff;
+}
+
+.select__league {
+    display: flex;
+    flex-direction: column;
+}
+
+.select__squad {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 8rem;
+    padding: 4px;
+    margin: 20px 0;
+}
+
+button:not(:first-child) {
+    margin-left: 10px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(83, 83, 83);  
+    box-sizing: border-box;
+}
+
+.submit__btn {
+    background-color: #009444;
+    color: #fff;
+}
+
+.submit__btn:hover {
+    background-color: #06813f;
+}
